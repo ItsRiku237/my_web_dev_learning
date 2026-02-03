@@ -1,0 +1,30 @@
+<!-- 
+Topic: HTML Basic Structure with Media
+Description: Demonstrates basic HTML boilerplate, image tag, and video tag
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the Website -->
+    <title>Riku First web</title>
+
+    <!-- Link the CSS file to html file -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    I am Riku.
+
+    <img src="download.jpg" alt="Doctor Strange image">
+    <!-- <br> it give separate line from image. -->
+    
+    <!-- Adding video on website -->
+    <video src="VID-20250321-WA0024.mp4" controls ></video>
+
+    <!-- Link the java script file with html -->
+    <!-- <script src="script.jc"></script> -->
+</body>
+</html>
