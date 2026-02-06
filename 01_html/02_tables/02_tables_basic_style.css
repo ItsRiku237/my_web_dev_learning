@@ -1,0 +1,9 @@
+td{
+    border: 2px solid black;
+}
+table{
+    border: 3px solid gray;
+}
+th{
+    border: 4px solid orange;
+}
