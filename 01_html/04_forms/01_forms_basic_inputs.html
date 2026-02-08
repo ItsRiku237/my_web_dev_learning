@@ -1,0 +1,51 @@
+<!-- Topic: HTML Forms - Basic Inputs
+Description: Demonstrates form elements like input (text, radio, checkbox), textarea, and select dropdown -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>Form to apply web development course</h1>
+
+    <!-- <form action="get/ post"></form>  make form like train ticket form-->
+     <!-- <form action="#" method="post">
+        (action is URL, method is GET/POST) -->
+    <form action="post">
+        <!-- <div></div> it make space or new line -->
+        <div>
+            <label for="username">Enter your username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" autofocus>
+        </div>
+
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Student" id="Student" value="Yes">
+            <label for="Student">Interested for learn web dev</label>
+        </div>
+        <div>
+            <label for="comment">Enter your comment</label>
+            <!-- line break teg <br> -->
+            <br><!--Not recommended bcz it create problem-->
+            <textarea name="" id="comment" rows="4" cols="40">Enter</textarea>
+        </div>
+        <div>
+            <select name="Fruits" id="">
+                <option value="apple">Apple</option>
+                <option value="mango">Mango</option>
+                <option value="banana">Banana</option>
+            </select>
+        </div>
+    </form>
+</body>
+
+</html>
