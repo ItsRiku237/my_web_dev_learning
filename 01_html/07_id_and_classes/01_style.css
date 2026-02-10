@@ -1,0 +1,18 @@
+.red{
+    color: aqua;
+}
+
+.bg-Blue{
+    background-color: rgb(70, 34, 211);
+}
+
+/* # use for classes nad it also use for generatinga link(when  any web id is copy and then paste them with # then it transist to that page). */
+#firstdiv{
+    background-color: rgb(188, 162, 84);
+}
+#seconddiv{
+    background-color: burlywood;
+}
+#Zero{
+    color: rgb(200, 180, 155);
+}
