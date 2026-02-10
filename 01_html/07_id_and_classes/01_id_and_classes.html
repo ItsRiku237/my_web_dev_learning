@@ -1,0 +1,25 @@
+<!-- id is a unique identifier for a single HTML element on a page.
+That means one id = one element only. You cannot reuse the same id for multiple elements.
+class is used to group multiple elements under the same name.
+You can use the same class on many elements. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id and Classes in HTML</title>
+    <link rel="stylesheet" href="01_style.css">
+</head>
+
+<body>
+    <!-- If an element has both class and id styles:
+👉 id always wins over class -->
+    <h1 id="Zero" class="bg-Blue">Zero</h1>
+    <div id="firstdiv" class="red  bg-Blue">First</div>
+    <div id="seconddiv" class="red bg-Blue">Second</div>
+    <span id="thirddiv" class="red bg-Blue">Third</span>
+    <span class="bg-Blue">Fourth</span>
+</body>
+
+</html>
