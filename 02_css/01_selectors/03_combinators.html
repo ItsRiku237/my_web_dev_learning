@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS SELECTER</title>
+
+    <style>
+        /* Child Selecter */
+        /* It selects only direct children. */
+        div > p{
+            background-color: rgb(223, 211, 37);
+            color: rgb(152, 226, 222);
+        }
+        
+        /* Descendant selecter */
+        /* It selects any element inside another element, no matter how deep it is. */
+        div p{
+            background-color: rgb(140, 237, 212);
+            color: rgb(112, 74, 17);
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <DIV>
+        I am div.
+        <p>I am a para.</p>
+    </DIV>
+  
+    <div>
+        <article>
+            <p>I am 2nd para.</p>
+        </article>
+    </div>
+    
+    <main>
+        <p>I am first.</p>
+        <p>I am second.</p>
+    </main>
+</body>
+</html>
