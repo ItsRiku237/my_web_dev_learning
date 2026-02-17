@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS SELECTER</title>
+
+    <style>
+        /* Pseudo Selecter */
+        /* Styles a link that has not been visited yet. */
+        a:link{
+            color: rgb(97, 82, 82);
+        }
+        /* Styles a link that the user has already clicked before */
+        a:visited{
+            color: rgb(227, 227, 253);
+        }
+        /* Applies style when the link is being clicked (mouse button pressed). */
+        a:active{
+            color: rgb(72, 4, 4);
+        }
+        /* Applies when mouse is placed over the link. */
+        a:hover{
+            background-color:rgb(100, 69, 69);
+        }
+        /* Selects a <p> only if it is the first child of its parent. */
+        p:first-child{
+            background-color: rgb(187, 8, 8);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <article>
+            <p>I am 2nd para.</p>
+        </article>
+    </div>
+    <a href="https://www.facebook.com">Go to Google</a>
+    <a href="https://www.google.com">Go to Google</a>
+    <DIV>
+        I am div.
+        <p>I am a para.</p>
+    </DIV>
+    <main>
+        <p>I am first.</p>
+        <p>I am second.</p>
+    </main>
+</body>
+</html>
