@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS SELECTER</title>
+
+    <style>
+        /* Element Selecter */
+        div{
+            background-color: aqua;
+            color: red;
+        }
+
+        /* Class Selecter */
+        /* The class selector does the same job as the id selector, a class selector helps group various types of elements. Suppose, we want to give a custom style to a specific group of elements. In this case, the class selector is the best option. */
+        .red{
+            background-color: bisque;
+        }
+
+        /* id Selecter */
+        /* The ID selector targets the elements based on the specific ID. It is written with the hash “#” character followed by the ID name in the style sheet */
+        #green{
+            color: blueviolet;
+        }
+
+        /* Child Selecter */
+        div > p{
+            background-color: burlywood;
+            color: antiquewhite;
+        }
+        
+        /* Descendant selecter */
+        div p{
+            background-color: burlywood;
+            color: antiquewhite;
+            /* background-color: blueviolet; */
+        }
+        /* Universal Selecter */
+        /* Universal selector represented by "*" targets all the HTML elements on the page. */
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        /* Pseudo Selecter */
+        a:link{
+            color: rgb(97, 82, 82);
+        }
+        a:visited{
+            color: rgb(227, 227, 253);
+        }
+        a:active{
+            color: rgb(72, 4, 4);
+        }
+        a:hover{
+            background-color:rgb(100, 69, 69);
+        }
+
+        p:first-child{
+            /* background-color: rgb(187, 8, 8); */
+        }
+    </style>
+</head>
+<body>
+    <DIV>
+        I am div.
+        <p>I am a para.</p>
+    </DIV>
+    <div id="green" class="red">
+        I am 2nd div.
+    </div>
+    <div>
+        <article>
+            <p>I am 2nd para.</p>
+        </article>
+    </div>
+    <a href="https://www.facebook.com">Go to Google</a>
+    <a href="https://www.google.com">Go to Google</a>
+    <main>
+        <p>I am first.</p>
+        <p>I am second.</p>
+    </main>
+</body>
+</html>
