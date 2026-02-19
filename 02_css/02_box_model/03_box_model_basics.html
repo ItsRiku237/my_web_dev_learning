@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>css Box_Model</title>
+    <style>
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: rgb(22, 139, 124);
+            padding: 10px;
+            border: 2px solid;
+            margin: 5px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+        .box2{
+            color: red;
+            padding: 10px;
+            border: 2px solid rgb(77, 49, 104);
+            margin: 5px;
+            height: 100px;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box.</div>
+    <div class="box box2">I am second box.</div>
+    <!-- 1. Content
+        The innermost component of the box model is the actual content of the element. It can be text, image, video, etc. -->
+    <!-- 2. Padding
+         The space between the actual content and the border of the element is the padding. -->
+    <!-- 3. Border
+        The border surrounds the content and padding and gives the visual border of the element -->
+    <!-- 4. Margin
+        The margin is the space outside the element that separates it from other elements in the layout. -->
+</body>
+</html>
