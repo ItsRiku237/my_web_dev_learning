@@ -1,0 +1,63 @@
+<!-- CSS Specificity helps determine what style will be applied to the HTML
+element(s) when there are overlapping or multiple CSS rules -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Specificity</title>
+    <style>
+        /* The specificity of this selecter is 1 */
+        h1 {
+            color: aqua;
+        }
+
+        /* The specificity of this selecter is 10 + 1 = 11*/
+        h1.red {
+            color: red;
+        }
+
+        /* The specificity of this selecter is 10 */
+        .blue {
+            color: blue;
+            /* color: chocolate !important; */
+        }
+
+        /* The specificity of this selecter is 10 */
+        .pink {
+            color: pink;
+        }
+
+        /* The specificity of this selecter is 1 + 10 + 10 + 10 + 10 = 41, :hover is a sudo class */
+        /* a.harryclass.rohan-class[href]:hover {
+            color: cadetblue;
+        } */
+
+        /* The specificity of this selecter is 10 */
+        /* Attribute Selector */
+        [data-x=a] {
+            background-color: beige;
+        }
+
+        /* Universal Selector: 0
+            Element selectors and pseudo-elements: 1
+            Class selectors, attribute selectors, and pseudo-classes: 10
+            ID selectors: 100
+            Inline styles: 1000 */
+    </style>
+</head>
+
+<body>
+    <h5>order of specificity is:
+        Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector</h5>
+    <div>
+        <h1 class="red  blue pink" data-x="a">CSS Specificity</h1>
+    </div>
+    <!--  The cascade algorithm has 4 distinct stages.
+
+        1 > Position and order of appearance: the order in which your CSS rules appear
+        2 > Specificity: an algorithm that determines which CSS selector has the strongest match
+        3 > Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+        4 > Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type -->
+</body>
+
+</html>
