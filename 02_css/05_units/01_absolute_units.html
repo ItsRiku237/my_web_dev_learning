@@ -1,0 +1,37 @@
+<!--px = fixed size, does NOT depend on Root element , parent or viewport  -->
+<!-- In CSS, 1px represents one unit of screen space. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Absolute unit</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Box width will always be 1366 pixels
+
+            It will NOT shrink automatically
+
+            On smaller screens → horizontal scroll may appear */
+        .box {
+            border: 2px solid greenyellow;
+            width: 1366px;
+            font-size: 18px;
+
+            /*scroolbar  not comming.*/
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a Box
+    </div>
+</body>
+
+</html>
