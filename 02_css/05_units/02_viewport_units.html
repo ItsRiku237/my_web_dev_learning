@@ -1,0 +1,69 @@
+<!-- Unit	Meaning
+vw	1% of viewport width   If browser width = 1000px → 1vw = 10px
+vh	1% of viewport height   If height = 800px   → 1vh = 8px
+vmin	1% of smaller side (width or height)  If: Width = 1200px Height = 800px vmin is based on 800px (smaller)   
+vmax	1% of larger side (width or height)  Width = 1200px Height = 800px vmax is based on 1200px-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <!-- vw = % of viewport width 
+        vh = % of viewport height -->
+    <style>
+        /* 100vh = full screen height */
+        .full-screen {
+            height: 100vh;
+            background-color: lightblue;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        /* 50vw = 50% of screen width */
+        .box-width {
+            width: 50vw;
+            height: 100px;
+            background-color: lightcoral;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* vmin example */
+        .vmin-box {
+            width: 30vmin;
+            height: 30vmin;
+            background-color: lightgreen;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 30vmin;
+        }
+
+        /* vmax example */
+        .vmax-text {
+            font-size: 5vmax;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+     <div class="full-screen">
+        <h1>100vh Section</h1>
+    </div>
+
+    <div class="box-width">
+        50vw Box
+    </div>
+
+    <div class="vmin-box">
+        30vmin
+    </div>
+
+    <div class="vmax-text">
+        5vmax Text
+    </div>
+</body>
+
+</html>
