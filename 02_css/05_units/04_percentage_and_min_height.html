@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MIN HEIGHT AND PERCENTAGE WIDTH</title>
+    <style>
+        /* min-height
+
+                Sets minimum height
+                Can grow if content increases
+                Better than fixed height for flexible layouts
+                🔹 width: %
+                Relative to parent
+                Makes layout responsive
+                Used in grid systems */
+        .container {
+            border: 2px solid burlywood;
+            width: 800px;
+            margin: 20px auto;
+        }
+
+        .box {
+            min-height: 100px;
+            border: 2px solid rebeccapurple;
+            background-color: bisque;
+            width: 50%;
+            padding: 10px;
+        }
+        /* .container > div > div */
+        p{
+            background-color: brown;
+            min-height: 150px;
+            border: 3px solid green;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>min-height and width % Example</h1>
+    <DIV class="container">
+        Lorem ipsum dolor sit amet consectetur.
+        <div class="box">
+            This box has min-height 100px and width 50%.
+            <p>50% of its imediate parent.</p>
+        </div>
+    </DIV>
+</body>
+
+</html>
