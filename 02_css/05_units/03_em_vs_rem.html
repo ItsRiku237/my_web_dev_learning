@@ -1,0 +1,100 @@
+<!-- 🔹 em:
+            Relative to parent element’s font-size
+            It keeps multiplying if nested
+     🔹 rem:
+            Relative to root element (html) font-size
+            Does NOT multiply inside nested elements -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EM vs REM</title>
+
+    <style>
+        /* Root element font size */
+        html {
+            font-size: 20px;
+            /* 1rem = 20px */
+        }
+
+        body {
+            margin: 20px;
+        }
+
+        /* Parent container */
+        .parent {
+            font-size: 30px;
+            /* 1em inside this = 30px */
+            border: 2px solid blue;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Child using em */
+        .child-em {
+            font-size: 2em;
+            /* 2 × parent (30px) = 60px */
+            border: 2px solid red;
+            padding: 10px;
+        }
+
+        /* Child using rem */
+        .child-rem {
+            font-size: 2rem;
+            /* 2 × html (20px) = 40px */
+            border: 2px solid green;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Nested example for em multiplication */
+        .nested {
+            font-size: 2em;
+            /* Multiplies again */
+            border: 2px dashed purple;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .container {
+            border: 3px solid aqua;
+            margin: 23px auto;
+            font-size: 18px; /* by default it 16px*/
+            box-sizing: border-box;
+            background-color: bisque;
+        }
+        .container p{
+            /*it multiply container px X p 'em' */
+            font-size: 2em;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Values_and_units -->
+    <h1>Understanding EM vs REM</h1>
+
+    <div class="parent">
+        Parent Font Size = 30px
+
+        <div class="child-em">
+            Child using 2em (2 × 30px = 60px)
+
+            <div class="nested">
+                Nested 2em again (2 × 60px = 120px)
+            </div>
+
+        </div>
+    </div>
+
+    <div class="child-rem">
+        Child using 2rem (2 × 20px = 40px)
+    </div>
+    <div class="container">
+        <p>child of container class</p>
+        </div>
+
+</body>
+
+</html>
