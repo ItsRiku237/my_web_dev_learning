@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Display Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid red;
+            width: 800px;
+            padding: 45px;
+            margin: 45px;
+        }
+        .box1{
+            border: 2px solid red;
+            width: 800px;
+            display: inline;
+            padding: 45px;
+            margin: 45px;
+        }
+        .box2{
+            border: 2px solid red;
+            width: 800px;
+            display: inline-block;
+            padding: 45px;
+            margin: 45px;
+        }
+        /* .box3{
+            display: none; 
+            visibility: hidden;
+        } */
+    </style>
+</head>
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display -->
+    <h1>Without disply property.</h1>
+    <div class="box box3">
+        I am a block element
+    </div>
+    <div class="box">
+        I am another block element
+    </div>
+    <span>
+        i am a inline element
+    </span>
+    <span>
+        i am another inline element
+    </span>
+
+    <h1>Disply inline property.</h1>
+    <div class="box1">
+        I am another block element
+    </div>
+    <div class="box1">
+        I am another block element
+    </div>
+    <span>
+        i am a inline element
+    </span>
+    <span>
+        i am another inline element
+    </span>
+
+    <h1>Disply inline-block property.</h1>
+    <div class="box2">
+        I am another block element
+    </div>
+    <div class="box2">
+        I am another block element
+    </div>
+    <span>
+        i am a inline element
+    </span>
+    <span>
+        i am another inline element
+    </span>
+</body>
+</html>
