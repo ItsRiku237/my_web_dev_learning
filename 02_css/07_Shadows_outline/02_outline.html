@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Shadows</title>
+    <style>
+        .outline{
+            /* Position: Outlines don't take up space; they're drawn around the element, outside of any border. */
+            /* outline: width style color; */
+            outline: 2px solid gray;
+            border: 2px solid green;
+            /* Offset: Using the outline-offset property, you can set the space between an outline and the edge or border of an element. */
+            outline-offset: 2px;
+            border-radius: 20px;
+            /* outline follow border generally youtlne can naot curve */
+        }
+    </style>
+</head>
+<body>
+    <p class="outline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, expedita?
+    </p>
+</body>
+</html>
