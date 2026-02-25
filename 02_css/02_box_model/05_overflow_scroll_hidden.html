@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overflow Scroll & Hidden</title>
+    <style>
+        .scroll{
+            width: 200px;
+            height: 80px;
+            border: 2px solid red;
+            overflow: scroll;
+        }
+
+        .hidden{
+            width: 200px;
+            height: 80px;
+            border: 2px solid blue;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div class="scroll">
+    This box always shows scrollbars even if not needed.
+</div>
+
+<div class="hidden">
+    This content is hidden if it exceeds the box size.
+</div>
+
+</body>
+</html>
