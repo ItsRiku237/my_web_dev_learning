@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        nav ul li {
+            border: 2px solid red;
+            background-color: bisque;
+            /* list-style:
+                shorthand property
+                = list-style-type + list-style-position + list-style-image */
+
+            /* list-style-type:
+                disc | circle | square | decimal | devanagari | none
+                Can also use custom symbol: list-style-type: "❤";*/
+            list-style: devanagari;
+            /* list-style: none; Remove bullets points*/
+            list-style-type: "❤";
+
+            /* list-style-position:
+                outside (default)
+                inside  → marker comes inside content area*/
+            list-style-position: inside;
+
+            /* list-style-image: Allows custom image as bullet*/
+            /* list-style-image: url(https://emojidb.org/imoji-emojis); */
+
+            /* list-style: disc inside ; */
+            /* If display:flex is used on li,
+                list-style may stop showing. */
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+
+</html>
