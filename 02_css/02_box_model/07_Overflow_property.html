@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid rgb(178, 142, 76);
+            width: 20vw;
+            height: 30vh;
+            padding: 10px;
+            margin: 10px;
+
+            /* Adds scrollbar ONLY if content overflows
+                If content fits → no scrollbar
+                If content exceeds → scrollbar appears */
+            overflow: auto;
+        }
+        .box1{
+            border: 2px solid rgb(77, 65, 42);
+            width: 20vw;
+            height: 10vh;
+            padding: 10px;
+            margin: 10px;
+
+            /* Always shows scrollbar,Even if content does not overflow */
+            overflow: scroll;
+            /* text-overflow: ellipsis; */
+            /* white-space: nowrap; */
+
+            /* Cuts extra content, No scrollbar, Hidden content cannot be seen */
+            /* overflow-x: hidden; */
+            overflow-y: hidden;
+        }
+        .box2{
+            border: 2px solid brown;
+            width: 20vw;
+            height: 10vh;
+
+            /* Meaning : Horizontal overflow → hidden ,Vertical overflow → scroll */
+            overflow: hidden scroll ;
+            /* overflow: hidden auto ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Lorem 23 ipsum dolor sit amet consectetur adipisicing elit. Laudantium molestiae, rem repellendus voluptatum porro corporis eveniet mollitia. Qui facilis voluptatibus excepturi illum tenetur.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos consequatur odit molestias ipsa dolor, sunt alias iure hic vero ducimus aliquam quia vel molestiae. Quisquam ut voluptates soluta natu jafjadf op
+    </div>
+    <div class="box1">
+        Lorem 23 ipsum dolor sit amet, consectetur adipisicing elit. Ad, deserunt? Cupiditate delectus laudantium omnis ad dicta recusandae, quidem, necessitatibus dolor, nobis sunt cumque!
+    </div>
+    <div class="box2">
+        Lorem 23 ipsum dolor sit amet, consectetur adipisicing elit. Ad, deserunt? Cupiditate delectus laudantium omnis ad dicta recusandae, quidem, necessitatibus dolor, nobis sunt cumque!
+    </div>
+</body>
+</html>
