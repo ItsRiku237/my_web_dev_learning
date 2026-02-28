@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Colour Variables</title>
+    <style>
+        :root{
+            --color:rgb(39, 207, 162);
+            --seccolor:rgb(148, 230, 219);
+            --defpad:30px;
+            --defopa:0.8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+        }
+
+        .nav{
+            --color:rgb(39, 207, 162);
+            background-color: var(--color);
+        }
+        ul li{
+            list-style: none;
+
+            --defpad:20px;
+            padding: var(--defpad);
+
+            --seccolor:rgb(145, 148, 144);
+            border: 2px solid var(--seccolor);
+            
+            --defopa:0.6;
+            opacity: var(--defopa);
+        }
+        ul li:first-child{
+            --color:rgb(234, 143, 143);
+            background-color: var(--color,pink );
+        }
+        .container{
+            --seccolor:rgb(69, 103, 98);
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, eligendi. Deserunt voluptatibus nisi similique,
+        consequuntur nam nesciunt suscipit, quasi autem ab omnis nobis corrupti sint ipsa tempore. Inventore autem
+        doloribus odio libero eum totam?
+    </div>
+
+</body>
+
+</html>
