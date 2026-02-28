@@ -1,0 +1,73 @@
+<!--
+CSS Variables (Custom Properties)
+
+Defined using --name
+Accessed using var(--name)
+
+Usually defined inside :root
+:root = global scope
+
+Helps:
+- Reusability
+- Theme changing
+- Cleaner code
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Colour Variables</title>
+    <style>
+        :root{
+            --color:rgb(39, 207, 162);
+            --seccolor:rgb(148, 230, 219);
+            --defpad:30px;
+            --defopa:0.8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+        }
+
+        .nav{
+            /* background-color: green; */
+            background-color: var(--color);
+        }
+        ul li{
+            list-style: none;
+
+            border: 2px solid var(--seccolor);
+
+            /* padding: 20px; */
+            padding: var(--defpad);
+
+            /* opacity: 0.7; */
+            opacity: var(--defopa);
+        }
+        .container{
+            /* background-color: rgb(78, 229, 78); */
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, eligendi. Deserunt voluptatibus nisi similique,
+        consequuntur nam nesciunt suscipit, quasi autem ab omnis nobis corrupti sint ipsa tempore. Inventore autem
+        doloribus odio libero eum totam?
+    </div>
+
+</body>
+
+</html>
