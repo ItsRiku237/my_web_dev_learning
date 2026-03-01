@@ -1,0 +1,65 @@
+<!-- /*
+Fallback Value
+var(--variable, fallback)
+Used when variable is not defined.
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Colour Variables</title>
+    <style>
+        /* :root{
+            --color:rgb(39, 207, 162);
+            --seccolor:rgb(148, 230, 219);
+            --defpad:30px;
+            --defopa:0.5;
+        } */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav{
+            background-color: var(--color , rgb(148, 148, 229));
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+
+            padding: var(--defpad ,40px);
+            border: 2px solid var(--seccolor,rgb(93, 93, 96));
+            opacity: var(--defopa,0.8);
+        }
+        ul li:first-child{
+            background-color: var(--color,pink );
+            /* This is fallback value.
+                Meaning:
+                If --color not found → use pink. */
+        }
+        .container{
+            background-color: var(--seccolor, rgb(246, 177, 124) );
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, eligendi. Deserunt voluptatibus nisi similique,
+        consequuntur nam nesciunt suscipit, quasi autem ab omnis nobis corrupti sint ipsa tempore. Inventore autem
+        doloribus odio libero eum totam?
+    </div>
+
+</body>
+
+</html>
