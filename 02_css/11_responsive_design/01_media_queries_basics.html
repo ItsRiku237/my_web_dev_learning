@@ -1,0 +1,60 @@
+<!-- Media Query?
+        Used to make website responsive. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        /* @media not|only mediatype and(expressions/condition){
+        css code
+    } */
+
+        /* min-width
+         For larger screens */
+        /* max-width
+        For smaller screens */
+        @media only screen and (max-width:455px) {
+            body {
+                background-color: blue;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+        /* orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                border: 2px solid green;
+            }
+        }
+
+        .boxes {
+            display: flex;
+        }
+
+        .box {
+            height: 344px;
+            width: 344px;
+            border: 2px solid;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Hiy i am Red body guy.</div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
