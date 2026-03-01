@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Card Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            background-color: grey;
+        }
+
+        .parent {
+            border-radius: 20px;
+        }
+
+        .mainBox {
+            border: 1px solid rgb(192, 247, 242);
+            height: 80vh;
+            width: 26vw;
+            padding: 8px;
+            background-color: beige;
+            position: relative;
+            top: 20px;
+            left: 37vw;
+        }
+
+        .secondMainBox {
+            border: 1px solid rgb(239, 194, 194);
+            height: 35vh;
+        }
+
+        .img {
+            width: 26vw;
+            height: 35vh;
+        }
+
+        span {
+            border: 1px solid rgb(239, 194, 194);
+            /* padding: top left bottom right; */
+            padding: 10px;
+            margin: 10px;
+            border-radius: 30px;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .US {
+            position: relative;
+            top: 15px;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            text-align: left;
+            font-family: "Poppins", sans-serif;
+            font-weight: 350;
+            font-style: italic;
+        }
+
+        /* .LS {
+            background-color: rgb(217, 239, 231);
+            color: rgb(84, 156, 184);
+            position: relative;
+            top: 0px;
+            left: 8vw;
+            } */
+        .button {
+            text-align: center;
+            border: 15px;
+        }
+        .button button {
+            background-color: rgb(217, 239, 231);
+            color: rgb(84, 156, 184);
+            padding: 10px 20px 10px 20px;
+            border: 1px solid rgb(239, 194, 194);
+            border-radius: 30px;
+            margin: -6px;
+            cursor: pointer;
+        }
+        .button  button:hover{
+            background-color: white;
+            color: rgb(93, 93, 181);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- card.png is a file which contains a card Image. Write html and css code to design this card. Use #html -->
+    <div class="parent mainBox">
+        <div class="parent secondMainBox">
+            <img src="download.jpg" class="img parent">
+        </div>
+        <span class="US">Nature</span>
+        <span class="US">Lake</span>
+        <div class="content">
+            <h2>Serene Lakeside Reflection</h2>
+            <p>This breathtaking landscape captures a vibrant sunset casting golden hues over a mirror-like lake.
+                Surrounded by lush greenery and majestic mountains, the scene offers a tranquil escape into nature’s
+                pure, untouched beauty.</p>
+        </div>
+        <!-- <span class="LS">Read more</span> -->
+        <div class="button">
+            <button>Read more</button>
+        </div>
+    </div>
+</body>
+
+</html>
