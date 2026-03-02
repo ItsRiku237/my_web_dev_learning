@@ -1,0 +1,47 @@
+<!-- 1. float: left | right
+   → Moves element to left or right
+   → Other content wraps around it -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Float</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            /* 3. display: flow-root
+                → Creates new block formatting context
+                → Fixes parent collapsing issue when using float */
+            display: flow-root;
+        }
+        .cards1{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        .card{
+            border: 2px solid red;
+        }
+        img{
+            /* float: left; */
+            float: right;
+        }
+        .img1{
+            float: left;
+            /* float: right; */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDnqOWBGKSsESyfdrkt1FTkHMu7bh8nCKRojIhkZlSs1lXNDKCpKB9DE&s" alt="image">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum ipsa aperiam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ullam at placeat.</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugiat culpa, at totam quia numquam, maiores aspernatur maxime fugit quibusdam commodi soluta doloribus cupiditate! Fugiat vero quisquam totam rerum numquam delectus ratione adipisci animi.</div>
+        <div class="card">card3</div>
+    </div>
+    <div class="cards1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDnqOWBGKSsESyfdrkt1FTkHMu7bh8nCKRojIhkZlSs1lXNDKCpKB9DE&s" alt="image" class="img1">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum ipsa aperiam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ullam at placeat.</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugiat culpa, at totam quia numquam, maiores aspernatur maxime fugit quibusdam commodi soluta doloribus cupiditate! Fugiat vero quisquam totam rerum numquam delectus ratione adiisci Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique voluptates molestiae voluptatem iure quo esse! Corrupti qui, a saepe ipsa voluptatum error in placeat veritatis fuga ex sed repellendus, sit minima, odit quia adipisci illo corporis eaque iure! Quas, omnis? Ad, vero a. Eveniet?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum saepe quisquam praesentium magnam non omnis, suscipit rem accusamus distinctio vitae, sint dolorem corporis, facere quam a unde esse quos dicta! Rem, laboriosam iusto omnis reiciendis, voluptatem saepe provident aliquam recusandae, earum minus sit consequuntur accusamus ratione quibusdam suscipit qui fuga animi cupiditate. Soluta aspernatur aliquid non? animi.</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vero, sed ut saepe iusto pariatur ratione cupiditate harum voluptate veritatis veniam odit ab ipsam fugit magni qui minus dolorum. Pariatur incidunt adipisci ipsum a voluptates. Nulla ad nemo totam optio nisi quasi quod eos dignissimos.</div>
+    </div>
+</body>
+</html>
