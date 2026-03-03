@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .box:first-child{
+            background-color: blueviolet;
+        }
+        .box::first-line{
+            color: red;
+        }
+        /* Universal selector (*) selects all elements.
+            Used carefully — affects performance. */
+        .boxes *{
+            border: 1px solid wheat;
+        }
+        [data-colour="primary"]{
+            margin-top: 20px;
+        }
+        .box:nth-child(odd){
+            padding-top: 20px;
+        }
+        .box:nth-last-child(2){
+            padding-right: 20px;
+        }
+        .boxes::before{
+            content: "I am Riku";
+        }
+        .boxes::after{
+            content: 'I am a devloper';
+        }
+        ::selection{
+            color: aquamarine;
+            background-color: black;
+        }
+        .box::first-letter{
+            color:rgb(197, 151, 151);
+            font-size: 30px;
+        }
+        input{
+            color: rgb(195, 128, 41);
+            /* background colour here apply in full box  */
+            /* background-color: aquamarine; */
+        }
+        input::placeholder{
+            /* background colour here only apply in content part  */
+            background-color: aquamarine;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum facere, dolores consequatur numquam, neque Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat soluta debitis, veniam eveniet distinctio, qui nostrum vero quidem at assumenda ratione ad quia? maxime quia aliquid delectus magni hic adipisci placeat optio consectetur voluptatem rerum soluta voluptatibus enim culpa ducimus laboriosam quidem praesentium?</div>
+        <div data-colour="primary" class="box"> box 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vero dicta nisi! Accusantium iusto exercitationem amet, saepe minima corrupti? Porro dignissimos doloribus animi!</div>
+        <div class="box">box 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus non commodi laboriosam aperiam, quis molestiae cupiditate accusamus repellendus dicta eaque et error iure voluptatum, consequatur impedit cum possimus? Doloremque facere placeat expedita! Vero, cumque!</div>
+    </div>
+    <input type="text" placeholder="Type your name here">
+</body>
+</html>
