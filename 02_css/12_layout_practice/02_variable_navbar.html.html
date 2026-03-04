@@ -1,0 +1,67 @@
+<!--
+Practice: Variable Based Navbar
+Concepts Used:
+1. :root CSS variables
+2. var() function
+3. Theming using variables
+4. Inline navigation layout
+5. Removing default list style
+6. Removing link underline
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: rgb(13, 80, 31);
+            ;
+            --secondary-color: rgb(66, 141, 70);
+            --text-color: rgb(255, 255, 255);
+        }
+
+        body {
+            background-color: var(--secondary-color);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            display: inline;
+            padding: 20px 10px 40px 30px;
+            color: var(--text-color);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+        }
+
+        ul li a {
+            color: var(--text-color);
+            /* It remove the underline bellow the word that come for href="" */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a multicolor website which can change color using CSS Variables -->
+    <header>
+        <nav>
+            <ul>
+                <!-- <li><a href="/">About</a></li>  This show index of vs code file.-->
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
