@@ -1,0 +1,77 @@
+<!--
+Concept: Grid Content Alignment
+
+justify-content → aligns whole grid horizontally
+align-content → aligns whole grid vertically
+
+Works only when:
+container size > grid size
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS GRID</title>
+    <style>
+        .container {
+            border: 2px solid blue;
+            width: 80vw;
+            height: 60vh;
+
+            display: grid;
+            /* grid-template-columns: 1fr 2fr 1fr; These automatically fill the entire container width.*/
+            grid-template-columns: 100px 100px 100px;
+
+            /* justify-content:Controls horizontal alignment of the entire grid inside the container.[container width > grid width]*/
+            /* justify-content apply when container big and item are small & fit inside container */
+            /* Values --> start,end,center,space-between,space-around,space-evenly */
+            /* justify-content: end; */
+            /* justify-content: center; */
+            justify-content: space-around;
+
+            /* These automatically fill the entire container width. */
+            align-content: end;
+
+            /* place-content: it apply on both justify-content & align content. align-content + justify-content*/
+            /* place-content: center; */
+        }
+
+        .item {
+            border: 2px solid green;
+            height: 55px;
+            width: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+    </div>
+    <!-- Property	    Controls	    Direction	    Scope
+        justify-items	item alignment	horizontal	    all items
+        align-items	    item alignment	vertical	    all items
+        justify-content	grid alignment	horizontal	    whole grid
+        align-content	grid alignment	vertical	    whole grid
+        justify-self	single item	    horizontal	    one item
+        align-self	    single item	    vertical	    one item -->
+    <!-- Think like this:
+            GRID CONTAINER
+                ↓
+            GRID CELL
+                 ↓
+            GRID ITEM
+
+            Container controls : justify-content,align-content
+            Cell controls : justify-items,align-items
+            Individual item controls : justify-self,align-self -->
+
+    <!-- place-items:center;
+            Equivalent to : justify-items:center; + align-items:center; -->
+</body>
+
+</html>
