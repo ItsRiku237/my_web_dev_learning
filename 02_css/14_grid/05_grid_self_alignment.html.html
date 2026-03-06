@@ -1,0 +1,95 @@
+<!--
+GRID SELF ALIGNMENT
+
+justify-self → horizontal alignment of ONE grid item
+align-self   → vertical alignment of ONE grid item
+
+Values: start,end,center,stretch (default)
+
+Shortcut:
+place-self:center
+= justify-self:center + align-self:center
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS GRID</title>
+    <style>
+        .container {
+            border: 2px solid blue;
+            width: 80vw;
+            height: 60vh;
+
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(4, minmax(100px, 1fr));
+            /* grid-template-rows: repeat(2, minmax(80px, 1fr)); */
+
+            /* justify-self:Controls horizontal alignment of ONE grid item.
+                While justify-items affects all items, justify-self affects one item only. */
+            /* justify-self:align one grid item horizontally inside its grid cell */
+            /* justify-self: center; */
+            /* justify-self: end; */
+            /* justify-self: flex-start; */
+            /* justify-self: baseline; */
+            /* justify-self: last baseline; */
+
+        }
+
+        .item {
+            border: 2px solid green;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item1 {
+            /* align-self:Same as justify-self, but vertical alignment. */
+            /* align-self: start; */
+            align-self: center;
+            justify-self: end;
+        }
+
+        .item2 {
+            justify-self: center;
+            align-self: center;
+        }
+
+        .item4 {
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+    </div>
+    <!-- Property	    Controls	    Direction	    Scope
+        justify-items	item alignment	horizontal	    all items
+        align-items	    item alignment	vertical	    all items
+        justify-content	grid alignment	horizontal	    whole grid
+        align-content	grid alignment	vertical	    whole grid
+        justify-self	single item	    horizontal	    one item
+        align-self	    single item	    vertical	    one item -->
+    <!-- Think like this:
+            GRID CONTAINER
+                ↓
+            GRID CELL
+                 ↓
+            GRID ITEM
+
+            Container controls : justify-content,align-content
+            Cell controls : justify-items,align-items
+            Individual item controls : justify-self,align-self -->
+
+    <!-- place-items:center;
+            Equivalent to : justify-items:center; + align-items:center; -->
+</body>
+
+</html>
