@@ -1,0 +1,51 @@
+<!-- Concept: CSS Rotate Transform
+rotate(deg) rotates element clockwise.
+
+360deg = 1 full rotation
+0.25turn = 90deg
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Transform Rotation</title>
+    <style>
+        .container {
+            border: 2px solid gray;
+            width: 100vw;
+            height: 80vh;
+            margin: 50px;
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: rgb(95, 145, 145);
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+
+
+        }
+
+        .box1 {
+            transform: rotate(55deg);
+        }
+
+        .box2 {
+            /* 360degree is 1 turn so 0.25turn is 90deg */
+            transform: rotate(0.25turn);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"> Box1</div>
+        <div class="box box2"> Box2</div>
+    </div>
+</body>
+
+</html>
