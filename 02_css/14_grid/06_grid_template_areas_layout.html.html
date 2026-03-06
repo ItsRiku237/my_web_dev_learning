@@ -1,0 +1,86 @@
+<!--
+CSS GRID TEMPLATE AREAS:
+grid-template-areas is used to create page layouts easily.
+Steps:
+1. Define layout using grid-template-areas in container
+2. Assign names to grid items using grid-area
+
+Example layout:
+
+nav nav nav
+side article article
+footer footer footer
+
+Meaning:
+Row 1 → Navigation bar
+Row 2 → Sidebar + Main content
+Row 3 → Footer
+
+Advantages:
+• Easy to design full webpage layouts
+• Code becomes more readable
+• Better for complex layouts
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <!-- grid-area property can be used in two ways:
+        1️⃣ Naming method
+        grid-area: nav;
+        2️⃣ Line-based method
+        grid-area: row-start / column-start / row-end / column-end; -->
+    <style>
+        .container {
+            border: 2px solid green;
+
+            display: grid;
+            /* grid-template-columns: 200px 1fr 1fr; */
+            grid-template-areas: "nav nav nav"
+                "side article article"
+                "footer footer footer";
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 50px;
+            /* width: 50px; */
+        }
+
+        .item1 {
+            background-color: blueviolet;
+            grid-area: nav;
+        }
+
+        .item2 {
+            background-color: aquamarine;
+            grid-area: side;
+        }
+
+        .item3 {
+            background-color: brown;
+            grid-area: article;
+        }
+
+        .item4 {
+            background-color: burlywood;
+            grid-area: footer;
+        }
+
+        /* item5 has no grid-area defined, so the browser will place it
+         automatically in the next available grid cell */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">Nav</div>
+        <div class="item item2">Sidebar</div>
+        <div class="item item3">Article</div>
+        <div class="item item4">Footer</div>
+        <div class="item item5">5</div>
+    </div>
+</body>
+
+</html>
