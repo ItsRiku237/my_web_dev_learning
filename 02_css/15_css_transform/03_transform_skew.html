@@ -1,0 +1,64 @@
+<!--
+skew() tilts the element.
+
+skewX() → horizontal tilt
+skewY() → vertical tilt
+
+skewZ() does NOT exist
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Transform Skew</title>
+    <style>
+        .container {
+            border: 2px solid gray;
+            width: 100vw;
+            height: 80vh;
+            /* margin: 50px; */
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: rgb(95, 145, 145);
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+
+        }
+
+        .box2 {
+            transform: skew(10deg);
+        }
+
+        .box3 {
+            transform: skewy(50deg);
+        }
+
+        .box4 {
+            transform: skewx(50deg);
+        }
+
+        /* transform: skewz(50deg); we can not do that */
+        /* .box5{
+            skewZ() does NOT exist
+            transform: skewz(50deg);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"> Normal Box</div>
+        <div class="box box2"> Box2 (skew)</div>
+        <div class="box box3"> Box3 (skewy)</div>
+        <div class="box box4"> Box4 (skewx)</div>
+        <div class="box box5"> Box5 (skewZ)</div>
+    </div>
+</body>
+
+</html>
