@@ -1,0 +1,63 @@
+<!--
+scale() increases or decreases element size
+
+scale(1) = original size
+scale(1.5) = 1.5x bigger
+scaleX() = horizontal scaling
+scaleY() = vertical scaling
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Transform Scale</title>
+    <style>
+        .container {
+            border: 2px solid gray;
+            width: 60vw;
+            height:100vh;
+            /* margin: 50px; */
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: rgb(95, 145, 145);
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+        }
+
+        .box2 {
+            transform: scale(1.5);
+        }
+
+        .box3 {
+            transform: scalex(2.5);
+        }
+
+        .box4 {
+            margin: 50px;
+            transform: scale3d(2.5, 2.5, 2.5);
+            /* transform: scalex(2.5); */
+        }
+
+        .box5 {
+            transform: scaley(2.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"> Normal Box</div>
+        <div class="box box2"> Box2 (scale)</div>
+        <div class="box box3"> Box3 (scalex)</div>
+        <div class="box box4"> Box4 (scale3d)</div>
+        <div class="box box5"> Box5 (scaley)</div>
+    </div>
+</body>
+
+</html>
