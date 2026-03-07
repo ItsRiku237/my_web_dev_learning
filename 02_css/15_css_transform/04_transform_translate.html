@@ -1,0 +1,66 @@
+<!--
+translate() moves element from its original position.
+
+translateX() → move horizontally
+translateY() → move vertically
+
+px = fixed movement
+% = relative movement
+-->
+<!--
+Multiple transforms can be applied together.
+Order matters in transform operations.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Transform Translate</title>
+    <style>
+        .container {
+            border: 2px solid gray;
+            width: 100vw;
+            height: 80vh;
+            margin: 50px;
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: rgb(95, 145, 145);
+            height: 60px;
+            width: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box2 {
+            transform: translate(30px);
+        }
+
+        .box3 {
+            transform: translate(80%);
+        }
+
+        .box4 {
+            transform: translatey(50%);
+        }
+
+        .box5 {
+            transform: translatex(-90%) skew(40deg) translatey(40%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"> Normal Box</div>
+        <div class="box box2"> Box2 (translate(30px))</div>
+        <div class="box box3"> Box3 (translate(80%))</div>
+        <div class="box box4"> Box4 (translatey)</div>
+        <div class="box box5"> Box5 (Multiple transforms)</div>
+    </div>
+</body>
+
+</html>
