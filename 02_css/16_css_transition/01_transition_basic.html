@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: aqua;
+            width: 70vw;
+            height: 90vh;
+        }
+
+        .box {
+            background-color: rgb(34, 155, 115);
+            border: 2px solid rgb(72, 17, 17);
+            width: 20vw;
+            height: 20vh;
+            margin: 60px;
+        }
+
+        .box1 {
+            transition-property: background-color, transform;
+            transition-duration: 3s;
+            transition-delay: 1s;
+        }
+
+        .box2 {
+            transition-property: transform;
+            transition-duration: 5s;
+            transition-delay: 1s;
+        }
+
+        .box3 {
+            transition-property: all;
+            transition-duration: 2s;
+            transition-delay: 1s;
+        }
+        
+        /* CSS transition only works when a property changes. */
+        /* Now when you hover, transition will work */
+        .translate:hover {
+            transform: translateX(10vw) translateY(10vh) scale(1.5);
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1 translate">box1:Transition on specific properties</div>
+        <div class="box box2 translate">
+            box2:Transition only on transform
+        </div>
+        <div class="box box3 translate">box3:Transition on all properties</div>
+    </div>
+</body>
+
+</html>
