@@ -1,0 +1,59 @@
+<!--
+transform-origin changes the point from where transformation happens.
+Default origin = center
+Examples:
+0% 0% = top left
+50% 50% = center
+100% 100% = bottom right
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Transform Origin</title>
+    <style>
+        .container {
+            border: 2px solid gray;
+            width: 80vw;
+            height: 80vh;
+            margin: 80px;
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: rgb(95, 145, 145);
+            height: 70px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box2 {
+            transform: rotate(0.25turn);
+            transform-origin: 0% 0%;
+
+        }
+
+        .box3 {
+            transform: rotate(307deg);
+            transform-origin: 40% 0%;
+        }
+
+        .box4 {
+            transform: rotate(60deg);
+            transform-origin: 0% 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"> Normal Box</div>
+        <div class="box box2"> Box2 (transform-origin: 0% 0%;)</div>
+        <div class="box box3"> Box3 (transform-origin: 40% 0%;)</div>
+        <div class="box box4"> Box4 (transform-origin: 0% 90%;)</div>
+    </div>
+</body>
+
+</html>
