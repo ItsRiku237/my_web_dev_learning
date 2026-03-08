@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: aqua;
+            width: 60vw;
+            height: 90vh;
+        }
+
+        .box {
+            background-color: aquamarine;
+            border: 2px solid sandybrown;
+            width: 20vw;
+            height: 10vh;
+            padding: 40px;
+        }
+        
+        .box1 {
+            transition-property: background-color, transform;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            
+            transition-timing-function: ease-in-out;
+            /* transition-timing-function: ease; */
+            /* transition-timing-function:ease-out; */
+        }
+        
+        /* box 2 hover when we pass courser bcz it was not contain back-ground-colour property */
+        .box2 {
+            transition-property: transform;
+            transition-duration: 4s;
+            transition-delay: 1s;
+
+            transition-timing-function: cubic-bezier(0, 1.02, 0.38, 1.14);
+        }
+
+        .box3 {
+            transition-property: all;
+            transition-duration: 2s;
+            transition-delay: 1s;
+
+            transition: all 3s Fast Out,Linear In 1s;
+        }
+
+        .translate:hover {
+            transform: translateX(10vw) translateY(10vh) scale(1.5);
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1 translate">transition-timing-function: ease-in-out</div>
+        <div class="box box2 translate">cubic-bezier(0.9, 0.69, 0.73, 0.54)</div>
+        <div class="box box3 translate"></div>
+    </div>
+</body>
+
+</html>
