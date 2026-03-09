@@ -1,0 +1,65 @@
+<!--
+Concept: Multiple Animations
+
+One element can run multiple animations simultaneously
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: aqua;
+            width: 60vw;
+            height: 80vh;
+        }
+
+        .box {
+            background-color: aquamarine;
+            width: 20vw;
+            height: 30vh;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: RikuKaAnimation 3s ease-in-out 1s 5 reverse backwards; */
+
+            animation: RikuKaAnimation 3s ease-in-out 1s 3 reverse forwards,
+                Riku2 4s ease-in-out 3s 1;
+        }
+
+        @keyframes RikuKaAnimation {
+            from {
+                transform: translate(100px);
+                background-color: red;
+            }
+
+            to {
+                transform: translateX(190px);
+                background-color: yellow;
+            }
+        }
+
+        @keyframes Riku2 {
+            0% {
+                transform: rotate(200deg);
+            }
+
+            50% {
+                transform: rotate(600deg);
+            }
+
+            80% {
+                transform: rotate(900deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+
+</html>
