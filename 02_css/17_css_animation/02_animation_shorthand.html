@@ -1,0 +1,49 @@
+<!--
+Concept: Animation Shorthand
+
+syntax:
+animation: name duration timing-function delay iteration-count direction fill-mode;
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: aqua;
+            width: 60vw;
+            height: 80vh;
+        }
+
+        .box {
+            background-color: aquamarine;
+            width: 20vw;
+            height: 30vh;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: RikuKaAnimation 3s ease-in-out 1s 5 reverse backwards;
+        }
+
+        @keyframes RikuKaAnimation {
+            from {
+                transform: translate(100px);
+                background-color: red;
+            }
+
+            to {
+                transform: translateX(190px);
+                background-color: yellow;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+
+</html>
