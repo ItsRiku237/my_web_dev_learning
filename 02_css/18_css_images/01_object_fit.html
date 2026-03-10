@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 340px;
+            border: 2px solid chocolate;
+            background-color: azure;
+
+             /* we can put property here also */
+            /* object-fit: cover;
+            object-fit: contain;
+            object-fit: fill;
+            object-fit: scale-down; */
+        }
+        img{
+            height: 200px;
+            width: 250px;
+            border: 2px solid rgb(123, 64, 22);
+            
+        }
+        .img1{
+            /* cover property cover the img-container */
+            object-fit: cover;
+        }
+        .img2{
+            /* contain property show full img in img-container */
+            object-fit: contain;
+        }
+        .img3{
+            object-fit: fill;
+        }
+        .img4{
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="download.jpg" alt="">
+        <img class="img2" src="download.jpg" alt="">
+        <img class="img3" src="download.jpg" alt="">
+        <img class="img4" src="download.jpg" alt="">
+    </div>
+</body>
+</html>
