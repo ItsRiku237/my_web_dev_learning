@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="04_.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" style="display: flex;" data-createby="Riku">I am a box</div>
+        <div class="box" style="display: flex;">I am a box</div>
+    </div>
+
+    <script>
+        /* append → add at end
+            prepend → add at beginning
+            before → insert before element
+            after → insert after element
+            replaceWith → replace element*/
+        let div = document.createElement("div");//create
+        div.innerHTML = "I have been inserted by <b>Riku</b>"
+        div.setAttribute("class", "created");
+
+
+        document.querySelector(".container").append(div);   //it insert in the container class
+        document.body.append(div)    // it insert in the body(after all div or script)
+
+
+        document.body.prepend(div)     //Insert at the beginning of node
+        document.querySelector(".container").prepend(div);    //Insert at the beginning of node
+
+
+        document.body.before(div)     // Insert before node (Outside body)
+        document.body.after(div)     // Insert after node    (Outside body)
+
+
+        document.body.replaceWith(div)    // replaces node with the given nade (replace with body)
+        document.querySelector(".container").replaceWith(div)    // replaces node with the given nade (replace with container class)
+    </script>
+</body>
+
+</html>
