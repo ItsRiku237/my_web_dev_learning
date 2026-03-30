@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 20px;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Given 5 boxes , assign a random colour and a random background
+     to aeach box using dom concept. -->
+
+    <div class="container">
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+    </div>
+    <script>
+        // let boxes = document.getElementsByClassName("box")
+        let boxes = document.querySelector(".container").children
+        console.log(boxes)
+        console.log(Array.from(boxes)) // it give array of a HTML collection/list
+
+        function getRandomColor() {
+            // a + r (a-b) =>where r is the random no thenit give a random no btw a to b
+            // min + Math.random()*(max - min)
+            let val1 = 0 + Math.ceil(Math.random() * 255) // it give random no. btw 0 to 255
+            let val2 = 0 + Math.ceil(Math.random() * 255) // Math.ceil() => it give integer of a floating point
+            let val3 = 0 + Math.ceil(Math.random() * 255)
+            return `rgb(${val1}, ${val2} , ${val3})`
+        }
+
+        Array.from(boxes).forEach(e => {
+            e.style.backgroundColor = getRandomColor()
+            e.style.color = getRandomColor()
+        })
+    </script>
+</body>
+
+</html>
