@@ -1,0 +1,79 @@
+<!-- DOM Insert Methods
+
+insertAdjacentHTML → insert HTML
+insertAdjacentText → insert text
+insertAdjacentElement → insert element
+
+Positions:
+beforebegin, afterbegin, beforeend, afterend
+
+Class Methods
+
+classList.add() → add class
+classList.remove() → remove class
+classList.toggle() → add/remove
+classList.contains() → check class
+
+className → returns class string
+classList → returns class list -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="display: flex;" data-createby="Riku">I am a box</div>
+        <div class="box" style="display: flex;">I am a box</div>
+    </div>
+    <script>
+        // insert Adjacent HTML/Text /Element: This Method is used to insert HTML.
+        let cont = document.querySelector(".container")
+        
+        /*beforebegin → before element
+            afterbegin  → inside (start)
+            beforeend   → inside (end)
+            afterend    → after element*/
+
+        // Insert HTML into element at the beginning
+        cont.insertAdjacentHTML("afterbegin", "<b>Iam inside the water please help me here too much raining... iuooo</b>")
+
+        // Insert HTML immedialily after element
+        cont.insertAdjacentHTML("afterend", "<b>Iam inside the water please help me here too much raining... iuooo</b>")
+        
+        // Insert HTML imnedialily before element
+        cont.insertAdjacentHTML("beforebegin", "<b>Iam inside the water please help me here too much raining... iuooo</b>")
+        
+        // Insert HTML into element at the end
+        cont.insertAdjacentHTML("beforeend", "<b>Iam inside the water please help me here too much raining... iuooo</b>")
+
+        // element.insertAdjacentText(position, text)
+        //Inserts plain text (not HTML) ,Tags will not be rendered
+        cont.insertAdjacentText("beforeend", "<b>Iam inside the water please help me here too much raining... iuooo</b>")
+
+        //element.insertAdjacentElement(position, element)
+        // Inserts an actual DOM element
+        let newDiv = document.createElement("div")
+        newDiv.innerText = "I am a box"
+        cont.insertAdjacentElement("beforeend", newDiv)
+
+        console.log(document.querySelector(".container").classList)
+        console.log(document.querySelector(".container").className)
+        console.log(document.querySelector(".container").classList.add("Riku")) // add class
+        console.log(document.querySelector(".container").classList.remove("Riku")) //remove a class
+
+        //If class exists → remove it
+        // If not → add it
+        console.log(document.querySelector(".container").classList.toggle("red")) //false [Adds the rlass ifit doesnt eaist! otheruise remores it]
+        console.log(document.querySelector(".container").classList.toggle("red"))  //true  [Adds the rlass ifit doesnt eaist! otheruise remores it]
+    </script>
+</body>
+
+</html>
