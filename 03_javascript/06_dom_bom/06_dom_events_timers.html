@@ -1,0 +1,53 @@
+<!-- Timing Functions:
+setInterval → repeat
+setTimeout → run once
+
+clearInterval / clearTimeout → stop execution -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- More mouse event: -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events -->
+    <div class="container">
+        <div class="box">I am a box</div>
+    </div>
+    <button id="btn" class="button">Change contain</button>
+    <script src="06_dom_events.js"></script>
+
+    <script>
+        let boxes = document.querySelector(".container").children
+        function getRandomColor() {
+
+            let val1 = 0 + Math.ceil(Math.random() * 255) // it give random no. btw 0 to 255
+            let val2 = 0 + Math.ceil(Math.random() * 255) // Math.ceil() => it give integer of a floating point
+            let val3 = 0 + Math.ceil(Math.random() * 255)
+            return `rgb(${val1}, ${val2} , ${val3})`
+        }
+
+        // setInterval(() => { context }, interval); // intervals in milisecond(1000milisecond = 1 sec)
+        //Runs repeatedly after given time
+        let a = setInterval(() => {
+            document.querySelector(".box").style.color = getRandomColor();
+        }, 1000);
+
+        //clearInterval
+        console.log(a) //clearInterval(console.log(a)) , clearTimeout(console.log(a))
+
+        let b = setTimeout(() => {
+            document.querySelector(".button").style.color = getRandomColor();
+        }, 5000);
+
+        //clearTimeout
+        console.log(b) //clearTimeout(console.log(b))
+    </script>
+
+</body>
+
+</html>
