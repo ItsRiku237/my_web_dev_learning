@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        .box {
+            border: 2px solid greenyellow;
+            width: 1366px;
+            box-sizing: border-box;
+        }
+
+        .square {
+            border: 4px solid red;
+            width: 80vw;
+            height: 10vh;
+            /*scroolbar  not comming.*/
+            box-sizing: border-box;
+            margin: auto;
+            /*center the box*/
+        }
+
+        .container {
+            border: 3px solid aqua;
+            width: 90vw;
+            height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            /* by default it 16px*/
+            box-sizing: border-box;
+            background-color: bisque;
+        }
+
+        .container p {
+            /*it multiply container px into p 'em' */
+            /* font-size: 2em; */
+
+            /* it multiply <html> font size */
+            font-size: 2rem;
+            width: 100vmin;
+        }
+
+        .my_container {
+            border: 2px solid royalblue;
+            /* height: 100px; it fix the size in 100px*/
+            /* height: auto; when we increase item it autometically inc height. */
+            /* minheight - when less item are their it 100px height and when increase contaient it inc. height */
+            min-height: 100px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a Box
+    </div>
+    <div class="square">
+        This is second box
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem fugit velit corrupti facilis?
+            Necessitatibus soluta reprehenderit perspiciatis, ipsum autem non aspernatur, rerum quam qui deserunt
+            tenetur
+            inventore vel veniam excepturi ut tempore eum corporis velit sunt, optio et? Aspernatur, obcaecati voluptas
+            quia
+            possimus sunt eius.
+
+        </p>
+    </div>
+    <div class="my_container">Lorem ipsum dolor sit amet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut,
+        cumque voluptatum adipisci debitis iusto assumenda laboriosam quae in deserunt ipsum dolores quam optio mollitia
+        at soluta nam est eius tenetur odit voluptatibus neque aliquid. Illum, quos. Quidem ab sed minus doloremque ex
+        nam beatae molestias cumque ducimus est! Maiores veniam, iusto libero rem similique amet aspernatur.</div>
+</body>
+
+</html>

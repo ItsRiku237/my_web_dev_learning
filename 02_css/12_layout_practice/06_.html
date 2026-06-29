@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 70vh;
+            width: 70vw;
+            border: 2px solid black;
+            background-color: blue;
+            display: flex;
+            /* justify-content: flex-end; */
+            align-items: end;
+        }
+
+        .box {
+            height: 55px;
+            width: 55px;
+            border: 2px solid black;
+            background-color: red;
+            border-radius: 45px;
+
+            /* position: absolute; */
+            /* bottom: 0; */
+            /* top: 0; */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: projectile_motionX 3s linear infinite;
+        }
+
+        @keyframes projectile_motionX {
+            0% {
+                transform: translate (0px , 0px);
+            }
+
+            20% {
+                left: 100%;
+                transform: translate(100px, -100px);
+            }
+            40% {
+                left: 100%;
+                transform: translate(200px, -150px);
+            }
+            60% {
+                left: 100%;
+                transform: translate(300px, -100px);
+            }
+            80% {
+                left: 100%;
+                transform: translate(400px, -60px);
+            }
+            100% {
+                left: 100%;
+                transform: translate(500px, 0px);
+            }
+        }
+
+        @keyframes projectile_motionY {
+            from {
+                transform: translateY(0px);
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+                transform: translateY(-50px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

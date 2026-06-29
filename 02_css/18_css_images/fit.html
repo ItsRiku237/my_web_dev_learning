@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 340px;
+            /* height: 110px;
+            width: 200px; */
+            border: 2px solid chocolate;
+            /* background-color: azure; */
+            background-image: url("download.jpg");
+            background-position: top right;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+
+            background-clip: border-box;
+            background-clip: padding-box;
+        }
+        img{
+            height: 200px;
+            width: 250px;
+            border: 2px solid rgb(123, 64, 22);
+
+            /* cover property cover the img-container */
+            object-fit: cover;
+            /* contain property show full img in img-container */
+            object-fit: contain;
+
+            object-fit: fill;
+            object-fit: scale-down;
+
+            object-position: top right;
+            object-position: bottom right;
+            object-position: 20px 20px;
+            object-position: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="download.jpg" alt=""> -->
+    </div>
+</body>
+</html>

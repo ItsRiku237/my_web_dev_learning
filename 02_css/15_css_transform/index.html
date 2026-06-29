@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Transform</title>
+    <style>
+        .container{
+            border: 2px solid gray;
+            width: 100vw;
+            height: 80vh;
+            margin: 50px;
+        }
+        .box{
+            border: 2px solid red;
+            background-color: rgb(95, 145, 145);
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(40deg);
+            /* 360degree is 1 turn so 0.25turn is 90deg */
+            transform: rotate(0.25turn);
+            transform: rotatex(95deg);
+            
+            transform: scale(1.5);
+            transform: scalex(1.5);
+            transform: scale3d(2.5,2.5,2.5);
+            transform: skew(5deg);
+            transform: skewy(50deg);
+            /* transform: skewz(50deg); we can not do that */
+            
+            transform: translate(30px);
+            transform: translate(50%);
+            transform: translatey(50%);
+            
+            transform: translatex(-90%) skew(40deg) translatey(40%);
+            
+            transform: rotate(0.25turn);
+            transform-origin: 0% 0%;
+            transform-origin: 40% 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> Box</div>
+    </div>
+</body>
+</html>
