@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local_storage_notes</title>
+</head>
+
+<body>
+    <!-- 7. The Local Storage Manager:
+    You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage that takes a note object and saves it to the browser's local storage. -->
+
+    <input type="text" id="title" placeholder="Enter title">
+    <br><br>
+    <!-- The <br> HTML element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant. -->
+    <textarea name="Abc" id="content" placeholder="Enter content"></textarea>
+    <br>
+
+    <button onclick="save_note()">Save Note</button>
+
+    <script>
+
+        function saveNoteToLocalStorage(note) {
+            localStorage.setItem("note", JSON.stringify(note))
+        }
+        // Local Storage can store only strings.
+        // Object:cannot be stored directly. so Convert object → string
+        
+        function save_note() {
+
+            let title = document.getElementById("title").value
+            let content = document.getElementById("content").value
+
+
+            let note = {
+                title: title,
+                content: content
+            };
+            saveNoteToLocalStorage(note)
+        }
+
+    </script>
+</body>
+
+</html>
