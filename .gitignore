@@ -16,3 +16,20 @@
 # Audio
 *.mp3
 *.wav
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Build folders
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
