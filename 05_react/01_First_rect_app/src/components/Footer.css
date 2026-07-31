@@ -1,0 +1,10 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(70, 26, 111);
+    color: azure;
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+}

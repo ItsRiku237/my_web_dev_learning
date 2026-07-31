@@ -1,0 +1,16 @@
+nav , ul{
+    display: flex;
+    align-items: center;
+}
+ul{
+    gap: 25px;
+}
+li{
+    list-style-type: none;
+}
+nav{
+    background-color: beige;
+    color: blueviolet;
+    height: 40px;
+    padding: 15px;
+}
