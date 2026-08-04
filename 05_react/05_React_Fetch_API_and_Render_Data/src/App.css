@@ -1,0 +1,109 @@
+/* 1. GLOBAL ROOT RESET */
+*, *::before, *::after {
+  box-sizing: border-box;                      /* FIXED: Standardizes box model sizing across all browsers */
+  margin: 0;                                   /* ADDED: Destroys hidden native browser margins */
+  padding: 0;                                  /* ADDED: Destroys hidden native browser padding */
+}
+
+/* 2. FLEX CONTAINER ARCHITECTURE */
+.container {
+  display: flex;
+  gap: 24px;                                   /* UPGRADED: Expanded spacing slightly for better breathing room */
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f3f4f6;                   /* RETAINED: Sleek, clean light-gray canvas background */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* RETAINED: Premium system font stack */
+}
+
+/* 3. THE REFINED MODERN CARD */
+.card {
+  background-color: #ffffff;                   /* ADDED: Pure white solid backing layer */
+  border: 1px solid #e5e7eb;                   /* UPGRADED: Replaced harsh black line with clean, modern border */
+  border-radius: 12px;                         /* UPGRADED: Softer, high-end curved canvas borders */
+  overflow: hidden;                            /* RETAINED: Mandates nested items conform to curved corners */
+  width: 290px;                                /* FIXED: Replaced standard 300px with gold-ratio width */
+  height: 420px;                               /* RETAINED: Keeps layout heights uniformly identical */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 
+              0 2px 4px -1px rgba(0,0,0,0.04); /* UPGRADED: Soft, multi-layered realistic depth shadow */
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.2s ease;            /* ADDED: Preps card for hardware-accelerated movement */
+  box-sizing: border-box;
+}
+
+/* MICRO-INTERACTION (HOVER EFFECT) */
+.card:hover {
+  transform: translateY(-5px);                /* ADDED: Smooth interactive vertical bounce on hover */
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 
+              0 10px 10px -5px rgba(0,0,0,0.04);/* ADDED: Deeper dynamic drop shadow follow-through */
+}
+
+/* 4. UPPER INDEX STRIP */
+.id {
+  width: 100%;
+  padding: 12px 16px;                          /* UPGRADED: Generous spacing inside the upper container */
+  font-size: 0.85rem;                          /* ADDED: Micro typography sizing convention */
+  font-weight: 700;                            /* ADDED: High-visibility font weight scaling */
+  color: #4b5563;                              /* UPGRADED: Softer charcoal text treatment */
+  border-bottom: 1px solid #e5e7eb;            /* UPGRADED: Removed conflicting thick border */
+  box-sizing: border-box;
+  text-align: center;        
+}
+
+/* 5. TITLE HEADER STRIP (PURPLE) */
+.title {
+  width: 100%;
+  padding: 16px;                               /* UPGRADED: Boosted internal text layout spacing */
+  background-color: rgb(177, 132, 219);        /* RETAINED: Your exact signature violet identity */
+  color: #ffffff;                              /* UPGRADED: Swapped black text for high-contrast web-accessible white */
+  font-size: 1.15rem;                          /* UPGRADED: Authoritative header text scaling */
+  font-weight: 700;
+  line-height: 1.4;
+  box-sizing: border-box;
+   display: block;                              /* FIXED: Changed from webkit-box to standard block display */
+  overflow: visible;  
+  
+  /* LINE CLAMP ENGINE */
+  display: -webkit-box;
+                     /* ADDED: Limits titles to 2 rows maximum before truncating */
+  -webkit-box-orient: vertical;
+  overflow: hidden;                            /* ADDED: Cuts off rogue strings gracefully with a clean (...) */
+}
+
+/* 6. PRIMARY BODY COPY (TEAL) */
+.body {
+  width: 100%;
+  flex: 1;                                     /* RETAINED: Dynamic filler mechanism for inner height */
+  padding: 18px;                               /* UPGRADED: Maximum reading comfort padding buffer */
+  background-color: rgb(132, 219, 205);        /* RETAINED: Your exact signature mint/teal text container */
+  color: #1f2937;                              /* UPGRADED: Clean off-black color for premium text legibility */
+  font-size: 0.925rem;                         /* UPGRADED: Standard optimal baseline paragraph size */
+  line-height: 1.6;                            /* UPGRADED: Added vertical tracking space between word rows */
+  overflow-y: auto;                            /* RETAINED: Embedded scroll safety mechanism */
+  overflow-wrap: break-word;                   /* FIXED: Intact word wrap safety filter */
+  box-sizing: border-box;
+}
+
+/* PREMIUM CUSTOM SCROLLBAR OVERRIDES */
+.body::-webkit-scrollbar {
+  width: 6px;                                  /* ADDED: Minimalist thin scroll tracking width */
+}
+.body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.12);       /* ADDED: Elegant, semi-transparent track slider thumb */
+  border-radius: 10px;                         /* ADDED: Rounded scroll indicator capsule caps */
+}
+
+/* 7. METADATA FOOTER */
+.user_id {
+  width: 100%;
+  padding: 12px;                               /* UPGRADED: Proportional layout alignment space */
+  text-align: center;
+  font-size: 0.8rem;                           /* UPGRADED: Sub-text classification standard */
+  font-weight: 600;                            /* ADDED: Balanced weight to make text distinct */
+  color: #6b7280;                              /* UPGRADED: Modern cool-gray editorial color font */
+  background-color: #ffffff;                   /* RETAINED: Grounded white footer strip block */
+  border-top: 1px solid #e5e7eb;               /* UPGRADED: Fine layout bounding separation line */
+  box-sizing: border-box;
+}
