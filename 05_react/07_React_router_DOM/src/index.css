@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+nav{
+  display: flex;
+  gap: 50px;
+  border: 2px solid black;
+  background-color: blueviolet;
+  color: antiquewhite;
+}
+li{
+  list-style: none;
+  padding: 20px;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+.black{
+  color: black;
+}
